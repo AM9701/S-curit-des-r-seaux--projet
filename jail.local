@@ -1,0 +1,18 @@
+# Configuration pour le fail2ban pour le Apache
+[apache]
+enabled = true
+port    = http,https
+filter  = apache-auth
+logpath = /var/log/apache*/*error.log
+maxretry = 6
+
+[ssh]
+enabled = true
+port    = ssh
+filter  = sshd
+logpath  = /var/log/auth.log
+maxretry = 6
+
+
+[DEFAULT]
+
